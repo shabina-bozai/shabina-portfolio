@@ -3,11 +3,30 @@
 import { motion } from 'framer-motion'
 
 const skills = [
-  { category: 'Architecture', items: ['Principal-Level Architecture', 'Microservices Design', 'Distributed Systems', 'Application Modernization'] },
-  { category: 'Backend', items: ['Java 8-21', 'Spring Boot', 'Spring AOP', 'RESTful APIs'] },
-  { category: 'Cloud & DevOps', items: ['Docker', 'Kubernetes', 'Jenkins', 'CI/CD Pipelines'] },
-  { category: 'Data & Security', items: ['Oracle', 'PostgreSQL', 'JWT', 'OAuth', 'Fortify'] },
-  { category: 'AI & Modern Tools', items: ['GitHub Copilot', 'AI-Assisted Development', 'Code Quality Tools'] },
+  {
+    category: 'Enterprise Architecture',
+    items: ['Microservices', 'SOA', 'Cloud-Native', 'Distributed Systems', 'Event-Driven', 'Architecture Governance'],
+  },
+  {
+    category: 'Platform Engineering',
+    items: ['Java 8–21', 'Spring Boot', 'Spring AOP', 'RESTful APIs', 'Kafka', 'JMS / ActiveMQ'],
+  },
+  {
+    category: 'Cloud & DevOps',
+    items: ['Docker', 'Kubernetes', 'Jenkins', 'Bamboo', 'CI/CD Pipelines', 'SAFe'],
+  },
+  {
+    category: 'Security & Compliance',
+    items: ['Fortify', 'Veracode', 'Aqua', 'Snyk', 'Black Duck', 'Coverity', 'JWT'],
+  },
+  {
+    category: 'Observability & Monitoring',
+    items: ['Dynatrace', 'OpenTelemetry', 'Splunk', 'Kibana'],
+  },
+  {
+    category: 'AI & Modern Delivery',
+    items: ['AI-Assisted Development', 'GitHub Copilot', 'Vibe Coding', 'Angular v11–v19'],
+  },
 ]
 
 export default function About() {
@@ -41,44 +60,40 @@ export default function About() {
             </h3>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                Principal Software Developer with <span className="text-primary-400 font-semibold">20+ years of experience</span> architecting, 
-                modernizing, and delivering mission-critical enterprise platforms across healthcare, finance, and telecom domains.
+                Principal Enterprise Architect with <span className="text-primary-400 font-semibold">20+ years of experience</span> defining
+                architecture strategy, governing technology standards, and delivering mission-critical platform modernization
+                across healthcare, finance, and telecom.
               </p>
               <p>
-                Deep expertise in Java (8–21), Spring ecosystem, microservices, and distributed systems, with a strong focus 
-                on scalability, security, and long-term maintainability.
+                Deep technical authority across the full Java ecosystem (J2EE through Java 21), cloud-native infrastructure,
+                event-driven architecture, and enterprise security — with hands-on delivery credibility at every layer.
               </p>
               <p>
-                Proven leader in driving technical strategy, mentoring senior engineers, and partnering with architects 
-                and business stakeholders to translate complex requirements into robust solutions.
+                Proven leader in driving digital transformation initiatives: decomposing legacy monoliths, establishing
+                engineering governance, championing AI-assisted development, and leading distributed global teams.
               </p>
               <p>
-                Hands-on practitioner with modern DevOps, private cloud (Docker, Kubernetes), and AI-assisted development 
-                using GitHub Copilot to improve engineering velocity and quality.
+                SAFe practitioner with a track record of translating complex business and regulatory requirements into
+                scalable, secure, and maintainable enterprise platforms.
               </p>
             </div>
 
             <div className="mt-8 pt-8 border-t border-gray-700">
               <h4 className="font-semibold text-xl mb-4 text-primary-300">Key Achievements</h4>
               <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-accent-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-gray-300">Reduced production defects by ~30% through engineering best practices</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-accent-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-gray-300">Led multiple COBOL-to-Java modernization initiatives</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-6 h-6 text-accent-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="text-gray-300">Architected cloud-ready microservices on private cloud infrastructure</span>
-                </li>
+                {[
+                  'Defined reference architecture adopted across 5+ mission-critical enterprise platforms',
+                  'Zero critical unresolved vulnerabilities sustained across all production systems',
+                  'Led cloud-native decomposition of legacy monoliths enabling zero-downtime deployments',
+                  'Established org-wide AI-assisted development standards accelerating delivery velocity',
+                ].map((achievement) => (
+                  <li key={achievement} className="flex items-start gap-3">
+                    <svg className="w-6 h-6 text-accent-500 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span className="text-gray-300">{achievement}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </motion.div>

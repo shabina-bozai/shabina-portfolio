@@ -40,7 +40,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <motion.h1 
+          <motion.h1
             className="font-display text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function Hero() {
           >
             <span className="gradient-text">Shabina Bozai</span>
           </motion.h1>
-          
+
           <motion.div
             className="space-y-3 mb-8"
             initial={{ opacity: 0 }}
@@ -56,11 +56,33 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2 className="font-body text-2xl md:text-4xl lg:text-5xl font-light text-gray-300">
-              Principal Software Engineer
+              Principal Enterprise Architect
             </h2>
             <p className="font-body text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
-              Java Architect • Enterprise Application Modernization • 20+ Years Experience
+              Platform Modernization · Enterprise Architecture · AI Adoption · Digital Transformation
             </p>
+          </motion.div>
+
+          {/* Stats */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-8 mb-10 py-6 border-t border-b border-gray-700/50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            {[
+              { num: '20+', label: 'Years Experience' },
+              { num: '5+', label: 'Platforms Modernized' },
+              { num: 'SAFe', label: 'Enterprise Delivery' },
+              { num: 'Global', label: 'Team Delivery' },
+              { num: '4', label: 'Security Toolchains' },
+              { num: 'AI+', label: 'AI-First Engineering' },
+            ].map((stat) => (
+              <div key={stat.label} className="text-center">
+                <div className="font-display text-3xl md:text-4xl font-bold text-primary-400">{stat.num}</div>
+                <div className="text-xs text-gray-400 uppercase tracking-widest mt-1">{stat.label}</div>
+              </div>
+            ))}
           </motion.div>
 
           <motion.div
@@ -76,7 +98,7 @@ export default function Hero() {
               View Experience
             </a>
             <a
-              href="#contact"
+              href="mailto:shabina.bozai@gmail.com"
               className="px-8 py-4 bg-transparent border-2 border-primary-600 hover:bg-primary-600/10 text-white font-semibold rounded-lg transition-all duration-300"
             >
               Get in Touch
@@ -89,11 +111,11 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <a href="mailto:Shabina.bozai@gmail.com" className="hover:text-primary-400 transition-colors flex items-center gap-2">
+            <a href="mailto:shabina.bozai@gmail.com" className="hover:text-primary-400 transition-colors flex items-center gap-2">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              Shabina.bozai@gmail.com
+              shabina.bozai@gmail.com
             </a>
             <a href="https://www.linkedin.com/in/shabina-bozai" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors flex items-center gap-2">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

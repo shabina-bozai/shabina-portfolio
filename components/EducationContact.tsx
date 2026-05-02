@@ -103,15 +103,15 @@ export default function EducationContact() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                  <span>Lead Software Engineer</span>
+                  <span>Enterprise Architect</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                  <span>Principal Software Developer</span>
+                  <span>Principal Engineer</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                  <span>Software Architect</span>
+                  <span>Solutions Architect</span>
                 </div>
               </div>
               <p className="mt-4 text-sm text-gray-400 bg-primary-900/20 p-3 rounded-lg">

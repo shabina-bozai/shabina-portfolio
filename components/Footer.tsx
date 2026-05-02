@@ -10,28 +10,20 @@ export default function Footer() {
               Shabina Bozai
             </h3>
             <p className="text-gray-400 text-sm">
-              Principal Software Engineer specializing in enterprise Java architecture and application modernization
+              Principal Enterprise Architect specializing in platform modernization and digital transformation
             </p>
           </div>
 
           <div>
             <h4 className="font-semibold text-lg mb-4 text-gray-200">Quick Links</h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#about" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#experience" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
-                  Contact
-                </a>
-              </li>
+              {['About', 'Experience', 'Contact'].map((link) => (
+                <li key={link}>
+                  <a href={`#${link.toLowerCase()}`} className="text-gray-400 hover:text-primary-400 transition-colors text-sm">
+                    {link}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -50,13 +42,13 @@ export default function Footer() {
                 LinkedIn
               </a>
               <a
-                href="mailto:Shabina.bozai@gmail.com"
+                href="mailto:shabina.bozai@gmail.com"
                 className="flex items-center gap-2 text-gray-400 hover:text-primary-400 transition-colors text-sm"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Email
+                shabina.bozai@gmail.com
               </a>
             </div>
           </div>

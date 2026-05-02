@@ -4,61 +4,55 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    role: 'Principal / Lead Software Engineer',
-    company: 'Delta Dental of Michigan',
-    via: 'via GS Global Services / Trintel Technologies',
-    location: 'Okemos, MI',
+    role: 'Principal Enterprise Architect',
+    company: 'Healthcare Industry',
+    location: 'USA',
     period: 'July 2018 – Present',
     highlights: [
-      'Act as principal technical authority across multiple enterprise healthcare platforms, guiding architecture decisions and modernization strategy',
-      'Architect scalable, secure microservices using Java 21, Spring Boot, and RESTful APIs for provider administration and credentialing systems',
-      'Deploy applications on private cloud using Docker and Kubernetes, enabling containerized microservices and rolling deployments',
-      'Leverage GitHub Copilot to accelerate development and improve code consistency',
-      'Establish engineering best practices reducing production defects by ~30%',
-      'Lead design reviews and mentor senior engineers across multiple teams',
+      'Principal architect for 5+ mission-critical healthcare platforms — defined reference architecture standards, technology governance, and multi-year modernization roadmaps adopted across engineering teams.',
+      'Designed the microservices reference architecture powering provider administration, reimbursement, and credentialing workflows — cutting time-to-deploy new services from weeks to days.',
+      'Drove cloud-native decomposition of legacy monoliths into independently scalable, event-driven services on private cloud — enabling zero-downtime deployments across all platforms.',
+      'Established org-wide AI-assisted development standards — accelerating feature delivery velocity and reducing scaffolding overhead across teams.',
+      'Owned end-to-end Angular modernization strategy (v11→v19) — eliminated EOL risk across the frontend estate, unblocking dependent teams ahead of vendor support cutoffs.',
+      'Architected enterprise security compliance posture (Aqua · Fortify · Veracode · Snyk · Black Duck · Coverity) — zero critical unresolved vulnerabilities sustained across all production systems.',
+      'Defined observability standards via Dynatrace and OpenTelemetry — distributed tracing, SLA dashboards, and proactive incident prevention.',
     ],
-    technologies: ['Java 21', 'Spring Boot', 'Spring AOP', 'REST', 'Angular', 'Docker', 'Kubernetes', 'PostgreSQL', 'GitHub Copilot'],
+    technologies: ['Java 21', 'Spring Boot', 'Spring AOP', 'REST', 'Angular', 'Docker', 'Kubernetes', 'Kafka', 'PostgreSQL', 'Oracle', 'Dynatrace', 'OpenTelemetry', 'GitHub Copilot'],
   },
   {
-    role: 'Senior Software Engineer',
-    company: 'Ericsson',
-    via: 'via GS Global Services',
-    location: 'Piscataway, NJ',
+    role: 'Solutions Architect',
+    company: 'Global Telecom Industry',
+    location: 'USA',
     period: 'Oct 2016 – July 2018',
     highlights: [
-      'Designed and developed enhancements for high-volume messaging and notification systems',
-      'Led end-to-end development using Java, Spring Boot, JMS, and ActiveMQ',
-      'Refactored legacy components to improve performance and scalability',
-      'Performed root cause analysis and resolved critical production issues',
+      'Designed the event-driven messaging architecture for distributed telecom services — adopted Apache ActiveMQ + JMS patterns that eliminated dropped-message failures and enabled guaranteed delivery at scale.',
+      'Architected high-throughput notification microservices with message persistence and dead-letter queue patterns — supporting millions of daily events across the platform.',
+      'Established centralized observability framework (Splunk · Kibana) — reducing root-cause analysis time and enabling proactive SLA monitoring across distributed services.',
     ],
-    technologies: ['Java 8', 'Spring Boot', 'JMS', 'ActiveMQ', 'Cassandra', 'Jenkins', 'Angular'],
+    technologies: ['Java 8', 'Spring Boot', 'JMS', 'ActiveMQ', 'Cassandra', 'REST', 'Angular', 'Jenkins', 'Splunk', 'Kibana'],
   },
   {
-    role: 'Software Engineer',
-    company: 'Wolters Kluwer Financial Services',
-    via: 'via Ness USA',
-    location: 'Waltham, MA',
+    role: 'Technical Lead · Software Engineer',
+    company: 'Financial Regulatory Industry',
+    location: 'USA',
     period: 'July 2015 – June 2016',
     highlights: [
-      'Enhanced regulatory compliance applications for financial institutions',
-      'Designed and implemented stateless session beans and backend services',
-      'Optimized system performance for client-specific deployments',
+      'Delivered regulatory compliance architecture for financial institutions — translating complex, evolving regulatory requirements into auditable, maintainable technical platforms.',
+      'Engineered high-performance data models and PL/SQL tuning strategies sustaining reliability under high-volume transactional workloads.',
     ],
-    technologies: ['Java 7', 'Spring MVC', 'Hibernate', 'EJB', 'Oracle', 'WebSphere'],
+    technologies: ['Java 7/8', 'J2EE', 'Spring MVC', 'Hibernate/JPA', 'EJB', 'Oracle', 'PL/SQL', 'WebSphere', 'SOA'],
   },
   {
-    role: 'Technical Lead / Senior Developer',
-    company: 'Deloitte, Wipro, Infosys',
-    location: 'Multiple Locations',
+    role: 'Technical Architect · Delivery Lead',
+    company: 'Global IT Consulting',
+    location: 'India',
     period: '2005 – 2013',
     highlights: [
-      'Led end-to-end design of large-scale enterprise applications across healthcare, finance, and telecom',
-      'Key roles in multiple COBOL-to-Java modernization initiatives',
-      'Designed multi-tier, multi-threaded backend systems for high-volume transaction processing',
-      'Served as Technical Lead for distributed onshore/offshore teams',
-      'Established coding standards and design patterns to improve code quality',
+      'Led architecture and delivery of large-scale enterprise platforms across healthcare, finance, and telecom over 8 years — spanning full lifecycle from design through production operations.',
+      'Architectural authority for distributed onshore/offshore teams — system design decisions, technical governance, code quality standards, and delivery oversight.',
+      'Designed enterprise integration patterns across JMS, SOAP/REST, and mainframe interfaces — enabling interoperability across heterogeneous enterprise ecosystems.',
     ],
-    technologies: ['Java', 'J2EE', 'EJB', 'JMS', 'Spring', 'Web Services', 'WebSphere', 'Oracle'],
+    technologies: ['Java', 'J2EE', 'EJB', 'JMS', 'Spring', 'WebSphere', 'Oracle', 'PL/SQL', 'Ant', 'Maven'],
   },
 ]
 
@@ -78,7 +72,7 @@ export default function Experience() {
           </h2>
           <div className="w-24 h-1 bg-primary-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Two decades of architecting enterprise solutions across healthcare, finance, and telecom
+            Two decades of architecting and modernizing enterprise platforms across healthcare, finance, and telecom
           </p>
         </motion.div>
 
@@ -109,7 +103,6 @@ export default function Experience() {
                         {exp.role}
                       </h3>
                       <p className="text-xl font-semibold text-gray-200">{exp.company}</p>
-                      {exp.via && <p className="text-sm text-gray-400 mt-1">{exp.via}</p>}
                       <div className="flex flex-wrap gap-4 mt-3 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
